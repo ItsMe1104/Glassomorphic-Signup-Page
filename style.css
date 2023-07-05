@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+ /*The background-color is used to specify the background color of an element. On the other hand, if you only use “Background:” Property, you can either specify it’s valued as an image URL or as a color code*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.outer-box{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top left, #3ed8ff, #a8f5ff);  /*a function to have gradient effect -> first field means the gradient to where to go*/
+}
+
+.inner-box{
+    width: 400px;
+    margin: 0 auto;    /* auto will make the innerbox come between the left and right side of its parent that is the outer box*/
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); /*will make it will go above by 50% of its own height */
+    padding: 20px 40px;
+    /* background-color: #ffffff09; */
+    background: linear-gradient(to top left, #ffffffff, #ffffff33 );
+    backdrop-filter: blur(8px);   /*use to blur it*/
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px #2773a5;
+    z-index: 2;
+}
+
+.signup-header h1{     /*means signup-header wala class ke andar jaake h1*/
+    font-size: 2.5rem; 
+    color: #212121;
+}
+
+.signup-header p{
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.signup-body{
+    margin: 20px 0;
+}
+
+.signup-body p{
+    margin: 10px 0;
+}
+
+.signup-body p label{
+    display: block;
+    font-weight: bold
+}
+
+.signup-body p input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #cccc;
+    border-radius: 4px;
+    font-size: 1rem;      /*as inputs dont normally inherit font size from parent*/
+    margin-top: 4px;
+}
+
+.signup-body p input[type="submit"]   /*could have used Id but here we used a different typ of selector which is specially for input differentiating various types*/
+{
+    background-color: #3498bb;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.signup-body p input[type="submit"]:hover
+{
+    background-color: #2773a5;
+}
+
+
+.signup-footer{
+    color: #555;
+    text-align: center;
+}
+
+.signup-footer p a{
+    color: #2773a5;
+}
+
+.circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background:  linear-gradient(to top right, #ffffff33, #ffffffff) ;
+     /*to top right means start from opposite that is bottom left and finish to top right*/
+/* last tow digits in 8-digit rgb is alpha value */
+    position: absolute;
+}
+
+.c1{
+    top: 100px;
+    left: 40px;
+}
+
+.c2{
+    bottom: 200px;
+    right: 50px;
+}
+
